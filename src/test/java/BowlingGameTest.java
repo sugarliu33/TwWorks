@@ -6,6 +6,12 @@ import static org.junit.Assert.*;
 public class BowlingGameTest {
 
     @Test
+    public void test_11_strike() throws Exception {
+        String bowlingCode = "X|X|X|X|X|X|X|X|X|X||X9";           //299
+        assertEquals(new BowlingGame().getBowlingScore(bowlingCode), 299);
+    }
+
+    @Test
     public void test_all_strike() throws Exception {
         String bowlingCode = "X|X|X|X|X|X|X|X|X|X||XX";           //300
         assertEquals(new BowlingGame().getBowlingScore(bowlingCode), 300);
